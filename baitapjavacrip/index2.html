@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap</title>
+</head>
+
+<body>
+    <script>
+        let gan = [{
+            name: "Phong dep trai",
+            age: 27,
+            email: "Nguyen dinh phong",
+            isStatus: true,
+        },
+        {
+            name: "Phong dep vai",
+            age: 28,
+            email: "Nguyen dinh phong",
+            isStatus: true,
+        },
+        {
+            name: "Phong dep vai noii",
+            age: 20,
+            email: "Nguyen dinh phong",
+            isStatus: true,
+        }]
+
+
+
+        function ban_kinh(r) {
+            let v
+            return v = 4 / 3 * (Math.PI * r * r * r)
+        }
+        console.log("Ket qua = " + ban_kinh(5));
+        //Bai 2
+        function so_nguyen(a, b) {
+            let max = a;
+            let min = b;
+            if (max < b) {
+                max = b
+            }
+            if (min > b) {
+                min = b
+            }
+            let sum = 0
+            for (let i = min + 1; i < max - 1; i++) {
+                sum += i
+            }
+            return sum;
+        }
+        console.log(so_nguyen(6, 1));
+        //songuyento
+        function so_nguyen_to(n) {
+            let a = true;
+            if (n < 2) {
+                a = false;
+            }
+            for (let i = 2; i < n - 1; i++) {
+                if (n % i == 0) {
+                    a = false
+                    break;
+                }
+                else {
+                    a = true
+                }
+            }
+            return a
+        }
+        console.log(so_nguyen_to(3))
+        //
+        function sum(s) {
+            let sum = 0;
+            for (let i = 0; i <= s; i++) {
+                if (so_nguyen_to(i)) {
+                    sum += i
+                }
+            }
+            return sum;
+        }
+        console.log(sum(13))
+        //bai5
+        function uoc_so(n) {
+            let sum = 0
+            for (i = 1; i <= n; i++) {
+                if (n % i == 0) {
+                    sum += i;
+                }
+            }
+            return sum
+        }
+        console.log(uoc_so(9))
+
+        // bai 6
+        function Tim_Kiem(a) {
+            return Object.keys(a)
+        }
+        console.log(Tim_Kiem({
+            name: "Trương Minh Thúy",
+            age: 25,
+            email: 'support@techmaster.vn'
+        }))
+        // bai 7
+        function Tim_Kiem2(a) {
+            return Object.values(a)
+        }
+        console.log(Tim_Kiem2({
+            name: "Trương Minh Thúy",
+            age: 25,
+            email: 'support@techmaster.vn'
+        }))
+        //Bai 8
+        function Tim_Kiem3(b, a) {
+            return Tim_Kiem(a).includes(b)
+        }
+        console.log(Tim_Kiem3("age", {
+            name: "Trương Minh Thúy",
+            age: 25,
+            email: 'support@techmaster.vn'
+        }))
+        // bai 9
+        function Timkiem_4(a) {
+            return Tim_Kiem(a).length
+        }
+        console.log(Timkiem_4({
+            name: "Trương Minh Thúy",
+            age: 25,
+            email: 'support@techmaster.vn'
+        }))
+        //bai 10
+        function Tim_Kiem5(a) {
+            let b = []
+            for (let i = 0; i < a.length; i++) {
+                if (a[i].age > 25 && a[i].isStatus == true) {
+                    b.push(a[i])
+                }
+            }
+            return b
+        }
+        console.log(Tim_Kiem5(gan))
+        //bai 10
+        function Sap_Xep(c) {
+            for (let i = 0; i < c.length - 1; i++) {
+                for (let j = i + 1; j < c.length; j++) {
+                    if (c[i].age > c[j].age) {
+                        let temp = c[i].age
+                        c[i].age = c[j].age
+                        c[j].age = temp
+                    }
+                }
+            }
+            return c
+        }
+        console.log(Sap_Xep(gan))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function kiem_Tra(a,n){
+       var check = a.indexOf(n);
+       if(check==-1){
+           return false;
+       }
+       return true;
+    }
+   //////////////////////////////////////
+//Bai 2:
+    function kiem_Tra2(b){
+
+        return b.slice(0,8,"...");
+
+    
+    console.log(kiem_Tra2("Xin chào các bạn")+"...")
+
+    ////////////////////////////////////////
+    var sum="";
+    function kiem_tra3(c){
+        for(let i=0;i<10;i++){
+            sum+=c;
+        }
+        return sum;
+    }
+    // console.log(kiem_tra3("P"))
+///////////////////////////////////////////
+
+    function kiem_Tra4(d){
+    var sum1 = d        
+        for(let i=0;i<9;i++){
+            sum1+="-"+d;
+        }
+        return sum1
+    }
+    // console.log(kiem_Tra4("p"));
+// Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang. 
+// Ví dụ: repeatString('a', 5) => Kết quả trả về là 'a-a-a-a-a'
+    function kiem_tra5(a,n){
+        var sum2 = a , n
+        for(let i=0;i<n;i++){
+            sum2+="-"+a;
+        }
+        return sum2
+    }
+    console.log(kiem_tra5("p",9))
+//     Bài 7. Viết hàm đảo ngược chuỗi. Viết dunction với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó
+// Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'
+function kiem_tra6(a){
+    a.toLowerCase();
+    let newString = ""
+    for(let i=a.length-1;i>=0;i--){
+        newString+=a[i];
+
+    }
+    return newString;
+}
+console.log(kiem_tra6("Phong"))
+// Bài 8. Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không (đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc
+// false. Ví dụ ''Race car'' trả về true, ''hello world'' trả về false.
+function kiem_tra7(a){
+    var newString = ""
+    for(var i=a.length-1;i>=0;i--){
+        newString +=a[i];
+    }
+}
+// Bài 1. Viết hàm tìm ra số nhỏ nhất trong mảng các số. Ví dụ:
+function kiem_tra8(a){
+    var min =a[0]
+    for(var i=0;i<a.length;i++){
+        if(min>a[i]){
+            min=a[i]
+        }
+    }
+    return min
+}
+// console.log(kiem_tra8([6,4,6,3,3]))
+//////////////////////////////
+//lamlaibai1
+function kiem_Tra9(a){
+    console.log(a.sort())
+   return a[0]
+}
+// console.log(kiem_Tra9([9,6,5,7,6]))
+//so lon thu nhi trong mang
+function kiem_tra10(a){
+    var max = a[0]
+    for(var i=0;i<a.length;i++){
+        if(max<a[i-1]){
+            max=a[i]
+        }
+    }
+    console.log(max)
+    return max;
+}
+    console.log(kiem_tra10([8,8,8,6,7,9,9]))
+    </script>
+</body>
+</html>
